@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "WebstaurantStore/step_definitions",
         dryRun = false,
-        tags = " @Search",
+        tags = " @login ",
         plugin = {"html:target/default-cucumber-reports",
                 "json:target/cucumber.json"
         }
