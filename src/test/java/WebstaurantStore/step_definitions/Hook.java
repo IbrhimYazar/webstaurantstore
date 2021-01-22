@@ -30,7 +30,7 @@ public class Hook {
             System.out.println("Cleanup!");
             System.out.println("Test completed!");
         }
-        Driver.get().quit();
+       Driver.get().quit();
 
     }
 
