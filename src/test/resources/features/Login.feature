@@ -1,7 +1,7 @@
 
 Feature:
 
-#  Background:
+  Background:
 #    Given User on login page
 #    Then user input username
 #    Then user input password
@@ -16,7 +16,6 @@ Feature:
     And User verify that page title "Swag Labs"
     Then User Should click dropdown box
     Then User should click Price (Low to High) option
-#    And Verify that dropdown box has "Price (Low to High)" text
     And User click ADD TO CARD button
     Then User click cart icon
     Then Verify that user in the cart page
@@ -39,8 +38,8 @@ Feature:
 #    And Verify that dropdown box has "Price (Low to High)" text
 
   @login
-  Scenario: Valiodate error message
-#  Validate that after adding the lowest price item to the cart and checking out WITHOUT entering a first name, an error message appears
+  Scenario: Valiodate error messageGiven User Should click dropdown box
+    Then User should click Price (Low to High) option
     When User click ADD TO CARD button
     Then User click cart icon
     Then Verify that user in the cart page

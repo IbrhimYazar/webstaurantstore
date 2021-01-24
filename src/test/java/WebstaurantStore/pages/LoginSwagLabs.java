@@ -9,10 +9,12 @@ import org.openqa.selenium.support.ui.Select;
 
 public class LoginSwagLabs extends BasePage{
 
+
+    //  SINGLETON PATTERN
     @FindBy (xpath = "// input [ @ id=\"user-name\"]")
     WebElement userNameBoxElement;
     @FindBy (xpath = "// input [ @ id='password']")
-    WebElement passwordBoxElement;
+    WebElement passwordBoxElement; //
     @FindBy (xpath = "// input [ @ id='login-button']")
     WebElement loginButtonElement;
     @FindBy (xpath = "//select [ @ class='product_sort_container']")
@@ -84,6 +86,7 @@ public void clickLoginButton(){
 
     public void clickCartButton(){
         cartButtonElement.click();
+        Utiliies.wait(2);
     }
 
     public void verifyCartPage(){
