@@ -1,4 +1,4 @@
-package WebstaurantStore.utilities;
+package SwagLabPOM.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;

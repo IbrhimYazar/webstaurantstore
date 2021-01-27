@@ -1,8 +1,6 @@
-package WebstaurantStore.pages;
+package SwagLabPOM.pages;
 
-import WebstaurantStore.utilities.Driver;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
+import SwagLabPOM.utilities.Driver;
 import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {

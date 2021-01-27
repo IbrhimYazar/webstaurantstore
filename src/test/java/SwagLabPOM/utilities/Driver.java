@@ -1,4 +1,4 @@
-package WebstaurantStore.utilities;
+package SwagLabPOM.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

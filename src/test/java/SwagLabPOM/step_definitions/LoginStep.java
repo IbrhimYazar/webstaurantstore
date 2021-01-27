@@ -1,11 +1,9 @@
-package WebstaurantStore.step_definitions;
+package SwagLabPOM.step_definitions;
 
-import WebstaurantStore.pages.LoginSwagLabs;
-import WebstaurantStore.utilities.Driver;
+import SwagLabPOM.pages.LoginSwagLabs;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
 
 public class LoginStep {
 
@@ -81,6 +79,11 @@ public class LoginStep {
     @Then("User should see {string} error message")
     public void user_should_see_error_message(String string) {
         loginSwagLabs.errorMessage(string);
+    }
+
+    @Then("user enter {string} and {string}")
+    public void user_enter_and(String string, String string2) {
+        loginSwagLabs.login(string, string2);
     }
 
 

@@ -1,7 +1,7 @@
-package WebstaurantStore.step_definitions;
+package SwagLabPOM.step_definitions;
 
-import WebstaurantStore.utilities.ConfigurationReader;
-import WebstaurantStore.utilities.Driver;
+import SwagLabPOM.utilities.ConfigurationReader;
+import SwagLabPOM.utilities.Driver;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -21,16 +21,15 @@ public class Hook {
 
     @After
     public void teardown(Scenario scenario){
-
+        //if test failed - do this
         if(scenario.isFailed()){
             System.out.println("Test failed!");
-            byte[] screenshot = ((TakesScreenshot) Driver.get()).getScreenshotAs(OutputType.BYTES);
+            byte[] screenshot = ((TakesScreenshot)Driver.get()).getScreenshotAs(OutputType.BYTES);
             scenario.embed(screenshot, "image/png");
         }else {
             System.out.println("Cleanup!");
             System.out.println("Test completed!");
         }
-     //  Driver.get().quit();
 
     }
 

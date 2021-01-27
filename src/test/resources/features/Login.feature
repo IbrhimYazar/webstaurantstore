@@ -7,7 +7,7 @@ Feature:
 #    Then user input password
 #    Then user click login button
 
-    @SwagLabsTest
+  @SwagLabsTest
   Scenario: Validate error message
     Given User on login page
     Then user input username
@@ -24,7 +24,7 @@ Feature:
     And  User should see "Error: First Name is required" error message
 
   @login
-  Scenario: Validate successful login to the website
+  Scenario: Navigate successful login to the website
 #    Given User on login page
 #    Then user input username
 #    Then user input password
@@ -38,7 +38,7 @@ Feature:
 #    And Verify that dropdown box has "Price (Low to High)" text
 
   @login
-  Scenario: Valiodate error messageGiven User Should click dropdown box
+  Scenario: Validate error messageGiven User Should click dropdown box
     Then User should click Price (Low to High) option
     When User click ADD TO CARD button
     Then User click cart icon

@@ -1,16 +1,14 @@
-package WebstaurantStore.pages;
+package SwagLabPOM.pages;
 
-import WebstaurantStore.utilities.Driver;
-import WebstaurantStore.utilities.Utiliies;
+import SwagLabPOM.utilities.Driver;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
 public class LoginSwagLabs extends BasePage{
 
-
-    //  SINGLETON PATTERN
     @FindBy (xpath = "// input [ @ id=\"user-name\"]")
     WebElement userNameBoxElement;
     @FindBy (xpath = "// input [ @ id='password']")
@@ -33,6 +31,12 @@ public class LoginSwagLabs extends BasePage{
     WebElement continueButtonElement;
     @FindBy (xpath = "//body/div[@id='page_wrapper']/div[@id='contents_wrapper']/div[@id='checkout_info_container']/div[1]/form[1]/h3[1]")
     WebElement errorMessageElement;
+
+    public void login (String userName, String password){
+
+        userNameBoxElement.sendKeys(userName);
+        passwordBoxElement.sendKeys(password, Keys.ENTER);
+    }
 
 
 public void enterUserName(){
@@ -60,25 +64,15 @@ public void clickLoginButton(){
 
     public void clickDropDownBox(){
     dropDownBoxElement.click();
-        Utiliies.wait(1);
+       // Utiliies.wait(1);
     }
 
     public void selectPriceLowToHigh(){
         Select select = new Select(dropDownBoxElement);
         select.selectByVisibleText("Price (low to high)");
         clickElement.click();
-        Utiliies.wait(2);
+       // Utiliies.wait(2);
     }
-
-//    public void dropDownBoxText(String string){
-//
-//        String actualText = dropDownBox.getText();
-//        String expectedText = string;
-//        Assert.assertEquals(expectedText, actualText);
-//        System.out.println("Actual Text: " + actualText);
-//        System.out.println("Expected Text: " + expectedText);
-//
-//    }
 
     public void clickAddToCartButton(){
         addToCardElement.click();
@@ -86,7 +80,7 @@ public void clickLoginButton(){
 
     public void clickCartButton(){
         cartButtonElement.click();
-        Utiliies.wait(2);
+      //  Utiliies.wait(2);
     }
 
     public void verifyCartPage(){
